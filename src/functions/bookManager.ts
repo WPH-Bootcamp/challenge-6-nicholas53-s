@@ -6,13 +6,11 @@
 // Fungsi ini tidak mengembalikan nilai (void)
 // Petunjuk: pikirkan bagaimana cara menambahkan buku ke array yang sudah disediakan
 
-
 // Fungsi listBooks
 // Fungsi ini digunakan untuk menampilkan semua buku yang tersimpan
 // Tidak memerlukan parameter
 // Fungsi ini tidak mengembalikan nilai (void)
 // Petunjuk: pikirkan cara menampilkan data buku dengan format yang mudah dibaca
-
 
 // Fungsi searchBook
 // Fungsi ini digunakan untuk mencari buku berdasarkan judul
@@ -21,3 +19,14 @@
 // Petunjuk: jika parameter title diberikan, cari buku yang cocok
 //           jika tidak diberikan, tampilkan semua buku atau berikan informasi yang sesuai
 
+import { Book } from '../types/index';
+import { books } from '../data/books';
+
+// Fungsi addBook
+export function addBook(newBook: Book): void {
+  books.push(newBook);
+
+  console.log(
+    `✅ Buku "${newBook.title}" karya ${newBook.author} berhasil ditambahkan!`
+  );
+}
