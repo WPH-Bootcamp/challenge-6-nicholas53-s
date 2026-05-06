@@ -30,3 +30,21 @@ export function addBook(newBook: Book): void {
     `✅ Buku "${newBook.title}" karya ${newBook.author} berhasil ditambahkan!`
   );
 }
+
+// Fungsi ListBooks
+
+export function listBooks(): void {
+  console.log('📚 Daftar Buku:');
+  if (books.length === 0) {
+    console.log(' (Belum ada koleksi buku yang tersedia.)');
+    return;
+  }
+
+  books.forEach((book, index) => {
+    console.log(`\n ${index + 1}. Judul: ${book.title}`);
+    console.log(`    Penulis: ${book.author}`);
+    console.log(`    Tahun: ${book.publicationonYear}`);
+  });
+
+  console.log('\n================================\n');
+}
